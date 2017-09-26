@@ -48,3 +48,13 @@ function LetterChanges(str) {
 }  
 
 console.log(LetterChanges('hze!lloz'))
+
+//Simple Adding
+function SimpleAdding(num) { 
+  let result = 0;
+  for (let i = 0; i <= num; i++ ) {
+    result = result + i
+  } 
+  return result
+}  
+console.log(SimpleAdding(4))
