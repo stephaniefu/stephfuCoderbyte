@@ -32,3 +32,19 @@ function LongestWord(sen) {
 console.log(LongestWord('Hello!!!! how ar!e youuuu!!'))
   
 //Letter Change
+function LetterChanges(str) { 
+  let alpha = 'abcdefghijklmnopqrstuvwxyz'
+  let result = ''
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === 'z') {
+      result = result + 'a'
+    } else if (str[i].match(/[^a-zA-Z]/)) {
+      result = result + str[i]
+    } else {
+      result = result + alpha[alpha.indexOf(str[i]) + 1]      
+    }
+  }
+  return result.replace(/[aeiou]/g, (letter) => { return letter.toUpperCase() })
+}  
+
+console.log(LetterChanges('hze!lloz'))
