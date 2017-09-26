@@ -58,3 +58,15 @@ function SimpleAdding(num) {
   return result
 }  
 console.log(SimpleAdding(4))
+
+//Letter Capitalize
+function LetterCapitalize(str) { 
+  let word = str.split(' ')
+  let result = ''
+  for (let i = 0; i < word.length; i++) {
+    result = result + word[i][0].toUpperCase() + word[i].slice(1) + ' '
+  }
+  return result;
+}  
+
+console.log(LetterCapitalize('hello how are you'))
