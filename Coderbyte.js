@@ -70,3 +70,18 @@ function LetterCapitalize(str) {
 }  
 
 console.log(LetterCapitalize('hello how are you'))
+
+//Simple Symbols
+function SimpleSymbols(str) {
+  let result = true
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].match(/[a-zA-Z]/g)) {
+      if (str[i-1] !== '+' || str[i+1] !== '+') {
+        result = false;
+      }
+    }
+  }
+  return result
+}  
+
+console.log(SimpleSymbols('++d+==+c+=a+'))
