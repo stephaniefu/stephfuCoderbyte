@@ -104,3 +104,11 @@ function TimeConvert(num) {
 }
 
 console.log(TimeConvert(120))
+
+//Alphabet Soup
+function AlphabetSoup(str) {
+  let arr = str.toLowerCase().split('')
+  return arr.sort().join('')
+}
+
+console.log(AlphabetSoup('Hello'))
