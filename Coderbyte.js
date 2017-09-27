@@ -112,3 +112,27 @@ function AlphabetSoup(str) {
 }
 
 console.log(AlphabetSoup('Hello'))
+
+//AB CHeck
+function ABCheck(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === 'a') {
+      if (str[i+4] === 'b') {
+        return true;
+      }
+    }
+    if (str[i] === 'b') {
+      if (str[i+4] === 'a') {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function ABCheck(str) {
+  let aTob = /a...b/
+  let bToa = /b...a/
+  return str.match(aTob) || str.match(bToa) ? "true" : "false"
+}
+console.log(ABCheck('lane borrowed'))
