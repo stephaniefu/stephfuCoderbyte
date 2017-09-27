@@ -95,3 +95,12 @@ function CheckNums(num1,num2) {
 } 
 
 console.log(CheckNums(4,4))
+
+//Time Convert
+function TimeConvert(num) {
+  let hour = Math.floor(num/60)
+  let minutes = num % 60
+  return hour + ":" + minutes
+}
+
+console.log(TimeConvert(120))
