@@ -156,3 +156,15 @@ wordCount = (str) => {
 }
 
 console.log(wordCount('never eat shreded wheat or cake'))
+
+//ExOh
+ExOh = (str) => {
+  let x = 0
+  let o = 0
+  for (let i = 0; i < str.length; i++){
+    str[i] === 'x' ? x++ : o++
+  }
+  return x === o ? true : false
+}
+
+console.log(ExOh('xxooxoo'))
