@@ -136,3 +136,16 @@ function ABCheck(str) {
   return str.match(aTob) || str.match(bToa) ? "true" : "false"
 }
 console.log(ABCheck('lane borrowed'))
+
+//Vowel Count
+function VowelCount(str){
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].match(/[aeiou]/)) {
+      count++
+    }
+  }
+  return count
+}
+
+console.log(VowelCount('all cows eat grass and moo'))
