@@ -149,3 +149,10 @@ function VowelCount(str){
 }
 
 console.log(VowelCount('all cows eat grass and moo'))
+
+//Word Count
+wordCount = (str) => {
+  return str.split(' ').length
+}
+
+console.log(wordCount('never eat shreded wheat or cake'))
