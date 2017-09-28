@@ -168,3 +168,15 @@ ExOh = (str) => {
 }
 
 console.log(ExOh('xxooxoo'))
+
+//Palindrome
+Palindrome = (str) => {
+  let nospace = str.replace(' ', '');
+  let reverse = nospace.split('').reverse().join('')
+  if (nospace === reverse) {
+    return true
+  }
+  return false
+}
+
+console.log(Palindrome('racecar'))
