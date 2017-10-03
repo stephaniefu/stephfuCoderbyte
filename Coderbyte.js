@@ -180,3 +180,33 @@ Palindrome = (str) => {
 }
 
 console.log(Palindrome('racecar'))
+
+//Arith Geo
+ArithGeo = (arr) => {
+  let arith = []
+  let geo = []
+  for (var i = 0; i < arr.length - 1 ; i++) {
+    arith.push(arr[i+1] - arr[i])
+    geo.push(arr[i+1] / arr[i])
+  }
+  console.log(arith)
+  console.log(geo)
+  for ( let i = 0; i < arith.length; i++) {
+    if (checkSame(arith)) {
+      return 'ARITHMATIC'
+    } else if (checkSame(geo)) {
+      return 'GEOMETRIC'
+    } else {
+      return -1
+    }
+  }
+}
+
+checkSame = (arr) => {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] !== arr[i+1]) {
+      return false
+    }
+  }
+  return true
+}
