@@ -359,3 +359,13 @@ NumberAddition = (str) => {
     }
     return count;
   }
+
+  //Multiplicative Persistence
+  MultiplicativePersistence = (num) => {
+    let count = 0;
+    while(num.toString().length > 1) {
+      num = num.toString().split('').reduce((a,b) => {return Number(a) * Number(b)})
+      count++
+    }
+    return count;
+  }
