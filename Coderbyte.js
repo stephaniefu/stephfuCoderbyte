@@ -299,3 +299,15 @@ SwapCase = (str) => {
   }
   return result;
 }
+//NumberAddition
+NumberAddition = (str) => {
+  let arr = []
+  for (let i = 0; i < str.length; i++) {
+    let digit = ''
+    while (Number(str[i])) {
+      digit += Number(str[i])
+    }
+    arr.push(digit)
+  }
+  return arr.reduce((accum, curr) => { return accum + curr})
+}
