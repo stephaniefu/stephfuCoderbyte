@@ -210,3 +210,13 @@ checkSame = (arr) => {
   }
   return true
 }
+
+//DivisionStringified
+DivisionStringified = (num1, num2) => {
+  let result = '' + Math.round(num1/num2);
+  result = result.split('')
+  for(let i = result.length -3 ; i > 0; i-=3) {
+    result.splice(i,0,',')
+  }
+  return result.join('');
+}
