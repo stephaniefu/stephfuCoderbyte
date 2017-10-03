@@ -301,13 +301,11 @@ SwapCase = (str) => {
 }
 //NumberAddition
 NumberAddition = (str) => {
-  let arr = []
-  for (let i = 0; i < str.length; i++) {
-    let digit = ''
-    while (Number(str[i])) {
-      digit += Number(str[i])
+    var numbers = str.match(/[0-9]+/g);
+    var total = 0;
+    for (var i =0; i < numbers.length; i++) {
+      total += Number(numbers[i])
     }
-    arr.push(digit)
+    return total;         
   }
-  return arr.reduce((accum, curr) => { return accum + curr})
-}
+
