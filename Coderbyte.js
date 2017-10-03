@@ -309,3 +309,7 @@ NumberAddition = (str) => {
     return total;         
   }
 
+  //ThirdGreatest
+  ThirdGreatest = (strArr) => {
+    return strArr.sort((a,b) => {return a.length - b.length})[2]
+  }
