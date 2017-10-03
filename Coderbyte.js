@@ -348,3 +348,14 @@ NumberAddition = (str) => {
     }
     return false;
   }
+
+  //AdditivePersistence
+  AdditivePersistence = (num) => {
+    let count = 0;
+    while (num.toString().length > 1) {
+      num = num.toString().split('')
+      num = num.reduce((a,b) => {return Number(a) + Number(b)})
+      count++
+    }
+    return count;
+  }
