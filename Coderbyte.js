@@ -242,3 +242,25 @@ OverlappingRanges = (arr) => {
   }
   return false
 }
+
+//MeanMode
+MeanMode = (arr) => {
+  let mean = arr.reduce(function(accum, curr) { return accum + curr})/arr.length;
+  let storage = [];
+  for (let i = 0; i < arr.length; i++) {
+    let mode = arr[i]
+    let count = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] === mode) {
+        count ++
+      }
+    }
+    storage.push([count, mode])
+    storage.sort()
+  }
+  let mode = storage[storage.length - 1][0]
+  if (mode === mean) {
+    return 1
+  }
+  return 0
+}
