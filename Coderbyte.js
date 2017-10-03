@@ -220,3 +220,25 @@ DivisionStringified = (num1, num2) => {
   }
   return result.join('');
 }
+
+//Overlapping Ranges
+OverlappingRanges = (arr) => {
+  let count = 0;
+  let first = []
+  let second = []
+  for (let i = arr[0]; i <= arr[1]; i++) {
+    first.push(i)
+  }
+  for (let i = arr[2]; i <= arr[3]; i++) {
+    second.push(i)
+  }
+  for (let i = 0; i < first.length; i++) {
+    if (second.indexOf(first[i]) !== -1) {
+      count ++
+    }
+  }
+  if (count >= arr[4]) {
+    return true;
+  }
+  return false
+}
