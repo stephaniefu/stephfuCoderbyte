@@ -286,3 +286,16 @@ isOdd = (num) => {
   }
   return false
 }
+
+//SwapCase
+SwapCase = (str) => {
+  let result = ''
+  for(let i = 0; i < str.length; i++) {
+    if (str[i].match(/[a-z]/)) {
+      result += str[i].toUpperCase()
+    } else {
+      result += str[i].toLowerCase()
+    }
+  }
+  return result;
+}
