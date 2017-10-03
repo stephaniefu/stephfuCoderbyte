@@ -313,3 +313,27 @@ NumberAddition = (str) => {
   ThirdGreatest = (strArr) => {
     return strArr.sort((a,b) => {return a.length - b.length})[2]
   }
+
+  //SecondGreatlow
+  SecondGreatLow = (arr) => {
+    if(arr.length === 2) {
+      return [arr[1], arr[0]]
+    }
+    arr.sort((a,b) => {return a-b})
+    let smallest = arr[0]
+    let largest = arr[arr.length -1]
+    let secondSmall, secondLarge;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > smallest) {
+        secondSmall = arr[i]
+        break;
+      }
+    }
+    for(let i = arr.length - 1; i >= 0; i--) {
+      if (arr[i] < largest) {
+        secondLarge = arr[i];
+        break;
+      }
+    }
+    return [secondSmall, secondLarge]
+  }
