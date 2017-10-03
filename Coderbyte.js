@@ -369,3 +369,28 @@ NumberAddition = (str) => {
     }
     return count;
   }
+
+  //LetterCountI
+  LetterCountI = (str) => {
+    let arr = str.split(' ');
+    console.log(arr)
+    let count = 0;
+    let result;
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr[i].length; j++) {
+        let curr = arr[i][j]
+        let temp = 0;
+        for(let k = 0; k < arr[i].length; k++) {
+          if (arr[i][k] === curr) {
+            temp++
+          }
+        }
+        if (temp > count) {
+          count = temp;
+          result = arr[i]
+        }
+        console.log(curr)
+      }  
+    }
+    return result
+  }
