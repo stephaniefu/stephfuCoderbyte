@@ -264,3 +264,25 @@ MeanMode = (arr) => {
   }
   return 0
 }
+
+//DashInsert
+DashInsert = (str) => {
+  let result = ''
+  let num = str.split('')
+  console.log('this is num', num)
+  for (let i = 0; i < num.length; i++)  {
+    if (isOdd(num[i]) && isOdd(num[i+1]) && num[i+1] !== undefined) {
+      result += num[i] + '-'
+    } else {
+      result += num[i]
+    }
+  }
+ return result
+}
+
+isOdd = (num) => {
+  if (num % 2 !== 0) {
+    return true
+  }
+  return false
+}
