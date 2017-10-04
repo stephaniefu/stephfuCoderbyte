@@ -454,4 +454,18 @@ NumberAddition = (str) => {
     }
     return count;
   }
+
+  //OtherProducts
+  OtherProducts = (arr) => {
+    //iterate through the array and splice out the index/ keep reference to it
+      //reduce to find the product, push into result array
+      //insert the spliced out back in 
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+      let spliced = arr.splice(i,1);
+      result.push(arr.reduce((a,b) => {return a*b}))
+      arr.splice(i,0,spliced)
+    }
+    return result;
+  }
    
