@@ -441,4 +441,17 @@ NumberAddition = (str) => {
      }
      return true;
    }
+
+   //HammingDistance
+   HammingDistance = (strArr) => {
+    let one = strArr[0];
+    let two = strArr[1];
+    let count = 0;
+    for (let i = 0; i < one.length; i++) {
+      if (one.charAt(i) !== two.charAt(i)) {
+        count++
+      }
+    }
+    return count;
+  }
    
