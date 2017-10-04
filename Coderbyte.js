@@ -425,3 +425,20 @@ NumberAddition = (str) => {
     }
     return -1
   }
+
+  //Superincreasing
+  Superincreasing = (arr) => {
+    //for each iteration through, update total to the sum up to the index
+    //check if the current item is greater than total
+       //if not, return false
+     //return true
+     let total = 0;
+     for (let i = 0; i < arr.length; i++) {
+       if (arr[i] < total) {
+         return false
+       }
+       total += arr[i];
+     }
+     return true;
+   }
+   
