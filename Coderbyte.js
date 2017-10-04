@@ -394,3 +394,34 @@ NumberAddition = (str) => {
     }
     return result
   }
+
+  //ChangingSequence
+  ChangingSequence = (arr) => {
+    //check if it is initially increasing or decreasing
+    //if increasing 
+      //return index when it starts to decrease
+    //if decreasing
+      //return index when it starts to increase
+    //return -1
+    let pattern;
+      if (arr[1] > arr[0]) {
+        pattern = 'increasing'
+      } else {
+        pattern = 'decreasing'
+      }
+    console.log(pattern)
+    if (pattern === 'increasing') {
+      for(let i = 0; i <arr.length; i++) {
+        if (arr[i+1] < arr[i]) {
+          return i;
+        }
+      }
+    } else if (pattern === 'decreasing') {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i+1] > arr[i]) {
+          return i;
+        }
+      }
+    }
+    return -1
+  }
