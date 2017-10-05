@@ -468,4 +468,18 @@ NumberAddition = (str) => {
     }
     return result;
   }
-   
+  
+  //ArrayMatching
+  ArrayMatching = (strArr) => {
+    let result = []
+    let first = strArr[0];
+    console.log(first)
+    let second = strArr[1];
+    for (let i = 0; i < first.length; i++) {
+      let sum = Number(first[i]) + Number(second[i])
+      if (sum) {
+        result.push(sum)
+      }
+    }
+    return result.join('-')
+  }
