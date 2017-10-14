@@ -534,3 +534,23 @@ NextPalindrome = (num) => {
   } 
   return curr;
 }
+
+//closestenemy
+ClosestEnemy = (arr) => {
+  let index = arr.indexOf(1);
+  let twos = [];
+  let smallest;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 2) {
+      twos.push(i)
+    }
+  }
+  for (let i = 0; i < twos.length; i++) {
+    if (!smallest) {
+      smallest = Math.abs(twos[i] - index)
+    } else if (Math.abs(twos[i] - index) < smallest) {
+      smallest = Math.abs(twos[i] - index)
+    }
+  }
+  return smallest
+}
