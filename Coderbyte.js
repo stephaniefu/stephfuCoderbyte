@@ -523,3 +523,14 @@ NumberAddition = (str) => {
     }
     return false;
   }
+
+//NextPalindrome
+NextPalindrome = (num) => {
+  let curr = num
+  let reverse = curr.toString().split('').reverse().join('')
+  while (reverse !== curr) {
+    curr++
+    reverse = Number(curr.toString().split('').reverse().join(''))
+  } 
+  return curr;
+}
