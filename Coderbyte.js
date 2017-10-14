@@ -494,3 +494,32 @@ NumberAddition = (str) => {
       }
     }
   }
+
+  //ArrayAddition
+  ArrayAddition = (arr) => {
+    arr = arr.sort((a,b) => {return a-b});
+    console.log(arr)
+    let largest = arr.pop();
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i]
+      for(let j = 0; j < arr.length; j++) {
+        if (i != j) {
+          sum += arr[j];
+          if (sum === largest) {
+            return true;
+          }
+        }
+      }
+      for (let k = 0; k < arr.length; k++) {
+        if (k != i) {
+          sum -= arr[k];
+          if (sum === largest) {
+            return true
+          }
+        }
+      }
+      sum = 0;
+    }
+    return false;
+  }
