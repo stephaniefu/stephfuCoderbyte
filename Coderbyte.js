@@ -554,3 +554,19 @@ ClosestEnemy = (arr) => {
   }
   return smallest
 }
+
+//BitwiseOne
+BitwiseOne = (strArr) => {
+  let one = strArr[0].split('')
+  let two = strArr[1].split('')
+  console.log(one)
+  let result = ''
+  for(let i = 0; i < one.length; i++) {
+    if (Number(one[i]) === 0 && Number(two[i]) === 0) {
+      result += 0
+    } else {
+      result += 1
+    }
+  }
+  return result
+}
